@@ -3,12 +3,13 @@ import {
   Route,
   RouterProvider,
   Outlet,
-} from 'react-router-dom';
-import Footer from './components/Footer/Footer';
-import Navbar from './components/Navbar/Navbar';
-import Home from './pages/Home/Home';
-import Product from './pages/Product/Product';
-import Products from './pages/Products/Products';
+} from "react-router-dom";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
+import Product from "./pages/Product/Product";
+import Products from "./pages/Products/Products";
+import "./app.scss";
 
 const Layout = () => {
   return (
@@ -22,19 +23,19 @@ const Layout = () => {
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Layout />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home />,
       },
       {
-        path: '/products/:id',
+        path: "/products/:id",
         element: <Products />,
       },
       {
-        path: '/product/:id',
+        path: "/product/:id",
         element: <Product />,
       },
     ],
